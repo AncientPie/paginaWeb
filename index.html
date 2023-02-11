@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Recolección de data, html, css, js, github </title>
+	</head>
+	<body>
+		<h1>1. Botones con alertas y confirmaciones</h1>
+		<button>Botón como saphra (no hace nada)</button>
+		<br><br>
+		<button onclick="accion_1()" id="btn1">Botón #1</button><br><br>
+		<button onclick="accion_2()" id="btn2">Botón #10</button><br><br>
+		<button onclick="accion_3()" id="btn3">Botón #11</button>
+		<h2>2. Despliegue de datos (interfaz de entrada y salida</h2>
+		<p>Hola! A continuación solicitaremos algunos datos personales, esperamos que nos colabores con tu información, gracias!!</p><br>
+		<p>Primer nombre: <input type="text" name="recibeTexto1" id="txt1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		(Opcional) segundo nombre: <input type="text" name="recibeTexto2" id="txt2"><br></p>
+		<p>Primer apellido: <input type="text" name="recibeTexto3" id="txt3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Apellido 2: <input type="text" name="recibeTexto4" id="txt4"></p>
+		<button onclick="accion_4()" id="btn4">Aceptar</button><br>
+		Nombres:&nbsp; <output id="out1"></output> <br>Apellidos:&nbsp; <output id="out2"></output>
+		<style type="text/css">
+			/*Comentario UwU*/
+			body{
+				background-image: url(fondoMejor.jpg);
+				background-repeat: round;
+				/*color: rgb(0, 0, 255);*/
+				color: rgba(25,167,120,1.0);
+			}
+			h1{color: rgba(37, 193, 210, 1.0);}
+			h2{color: rgba(0,0,0, 1.0);}
+			#out1{color: rgba(255, 0, 255, 1.0);}
+			#out2{color: rgba(0, 255, 255, 1.0);}
+			#btn4{color: rgba(255, 0, 0, 1.0);}
+			body, html {
+				height: 100%;
+			}
+		</style>
+		<script type="text/javascript">
+			// Awebo comentario normal con slash slash
+			function accion_1(){
+				alert("Alerta del botón #1 ;)")
+			}
+			function accion_2() {
+				confirm("Confirmación del botón #2")
+			}
+			function accion_3(){
+				alert("Alerta del botón #3");
+				confirm("Confirmación botón #3")
+			}
+			function accion_4()
+			{
+				var nombreCompleto= document.getElementById('txt1').value+" "+
+									document.getElementById('txt2').value+" "+
+									document.getElementById('txt3').value+" "+
+									document.getElementById('txt4').value
+				alert(nombreCompleto)
+
+				var Nombres=document.getElementById('txt1').value+" "+document.getElementById('txt2').value
+				document.getElementById("out1").innerHTML=Nombres
+
+				var Apellidos=document.getElementById('txt3').value+" "+document.getElementById('txt4').value
+				document.getElementById('out2').innerHTML=Apellidos
+			}
+		</script>
+	</body>
+</html>
